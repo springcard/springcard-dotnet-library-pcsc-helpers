@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>$(DefaultTargetFrameworks)</TargetFrameworks>
+
+		<OutputPath>..\..\_output\$(FrameworkPath)\$(AssemblyName)\</OutputPath>
+		<IntermediateOutputPath>..\..\_obj\$(FrameworkPath)\$(AssemblyName)\</IntermediateOutputPath>
+
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpringCard.PCSC.CardEmulation\SpringCard.PCSC.CardEmulation.csproj" />
+    <ProjectReference Include="..\SpringCard.PCSC.CardHelpers.Desfire\SpringCard.PCSC.CardHelpers.Desfire.csproj" />
+		<ProjectReference Include="..\SpringCard.PCSC.CardHelpers.Smid\SpringCard.PCSC.CardHelpers.Smid.csproj" />
+  </ItemGroup>
+
+</Project>

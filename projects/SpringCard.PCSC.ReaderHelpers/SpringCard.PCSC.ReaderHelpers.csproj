@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
+
+		<OutputPath>..\..\_output\$(FrameworkPath)\$(AssemblyName)</OutputPath>
+		<IntermediateOutputPath>..\..\_obj\$(FrameworkPath)\$(AssemblyName)</IntermediateOutputPath>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="SpringCard.LibCs" />
+		<PackageReference Include="SpringCard.LibCs.Crypto" />
+		<PackageReference Include="SpringCard.PCSC" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+
+		<OutputPath>..\..\_output\$(FrameworkPath)\$(AssemblyName)\</OutputPath>
+		<IntermediateOutputPath>..\..\_obj\$(FrameworkPath)\$(AssemblyName)\</IntermediateOutputPath>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+		<BaseAddress>4194304</BaseAddress>
+		<RegisterForComInterop>False</RegisterForComInterop>
+		<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+		<FileAlignment>4096</FileAlignment>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<DebugType>None</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AssemblyTrademark>This program is an unsupported sample software from SpringCard's SDK. You may use it freely, but only together with a genuine SpringCard device. Please read the associated LICENSE.txt file for further information.</AssemblyTrademark>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="SpringCard.PCSC" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
+  </PropertyGroup>
+	
+  <!-- Public Nuget -->
+  <ItemGroup>
+		<PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageVersion Include="System.Configuration.ConfigurationManager" Version="10.0.1" />
+  </ItemGroup>
+	
+  <!-- SpringCard Nuget -->
+  <ItemGroup>
+    <PackageVersion Include="SpringCard.LibCs" Version="25.21.*" />
+		<PackageVersion Include="SpringCard.LibCs.Crypto" Version="25.21.*" />
+		<PackageVersion Include="SpringCard.LibCs.Windows" Version="24.44.*" />
+		<PackageVersion Include="SpringCard.PCSC" Version="25.22.*" />
+  </ItemGroup>
+	
+</Project>
